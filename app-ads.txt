@@ -34,11 +34,13 @@ facebook.com, Business ID, DIRECT, c3e20eee3f780d68
 #AdColony
 adcolony.com, fcaa373cac67c9f927aa914013b8346e, RESELLER, 1ad675c9de6b5176
 #Applovin
-applovin.com,c8802c2788bab3703acc24cf065d5390,RESELLER
-applovin.com,5c72b49c2b2ce6949bf0f98eafe9e417,RESELLER
-applovin.com,0b8086e03d0f715f09a9e6e5dbdbb4b8,RESELLER
-applovin.com,94bf1c89704c8e6a46341999e25b1b90,RESELLER
-applovin.com, 5c72b49c2b2ce6949bf0f98eafe9e417, RESELLER
+applovin.com, 14ec0ba8be26817f450dbc091fe3ebe2, DIRECT
+loopme.com, 11303, RESELLER, 6c8d5f95897a5a3b
+rubiconproject.com, 20744, RESELLER, 0bfd66d529a55807
+pubmatic.com, 158154, RESELLER, 5d62403b186f2ace
+xandr.com, 13799, RESELLER
+media.net, 8CUD06Z68, RESELLER
+pubmatic.com, 160113, RESELLER, 5d62403b186f2ace
 #InMobi
 inmobi.com, fafa1521dbdb43f69b1eb199a0b007fd, RESELLER, 83e75a7ae333ca9d
 rubiconproject.com, 11726, RESELLER, 0bfd66d529a55807
