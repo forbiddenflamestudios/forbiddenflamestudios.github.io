@@ -1,248 +1,210 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+@font-face {
+	font-family: 'LucideIcons';
+	/* Updated CDN link */
+	src: url(https://cdn.jsdelivr.net/npm/lucide-static@latest/font/Lucide.ttf) format('truetype');
 }
-
+.lucide {
+	font-family: 'LucideIcons';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block; /* Ensure icons behave like inline elements */
+}
+/* Custom Styles */
 body {
-	font-family: Arial, sans-serif;
-	color: #fff;
-	background-color: #333;
+	font-family: 'Inter', sans-serif;
+	background-color: #111827; /* Slightly darker blue-grey */
+	color: #e0e0e0; /* Light text */
+	overflow-x: hidden; /* Prevent horizontal scroll */
 }
+/* Accent color inspired by logo */
+.accent-color { color: #ff6600; }
+.bg-accent { background-color: #ff6600; }
+.border-accent { border-color: #ff6600; }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px;
-}
-
-header {
-	background-color: #222;
-	padding: 20px;
-}
-
-header h1 {
-	display: inline;
-	font-size: 36px;
-	color: #fff;
-	margin-right: 20px;
-}
-
-header img {
-	height: 50px;
-	width: 50px;
-	vertical-align: middle;
-}
-
-nav ul {
-	display: inline-block;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-nav ul li {
-	display: inline-block;
-	margin-left: 20px;
-}
-
-nav ul li a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 18px;
-}
-
-nav ul li a:hover {
+/* Active Nav Link */
+.nav-link.active {
 	color: #ff6600;
+	font-weight: 600;
+	border-bottom: 2px solid #ff6600;
 }
 
-main {
-	padding: 20px;
+/* Game Card Overlay Styles (Unchanged) */
+.game-card { position: relative; overflow: hidden; }
+.game-card-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; text-align: center; padding: 1rem; opacity: 0; transition: opacity 0.3s ease-in-out; pointer-events: none; border-radius: 0.5rem; }
+.game-card img{
+	width: 200px !important;
+	height: 200px !important;
 }
 
-.banner {
-	background-color: #ff6600;
-	padding: 50px;
-	text-align: center;
+.status-unmaintained .game-card-overlay { opacity: 1; pointer-events: auto; background-color: rgba(50, 50, 50, 0.8); }
+.status-unmaintained .overlay-text { color: #b0b0b0; font-weight: 500; }
+.status-down .game-card-overlay { z-index: 5;  pointer-events: auto; background-color: rgba(68, 42, 42, 0);}
+.status-down .overlay-text { z-index: 10; opacity:1; color: #ffffff; font-weight: 700; font-size: 1.1rem; }
+.status-unmaintained > *:not(.game-card-overlay),
+.status-down > *:not(.game-card-overlay) { filter: blur(2px); }
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Custom scrollbar (optional) */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1f2937; } /* Darker track */
+::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; } /* Grey thumb */
+::-webkit-scrollbar-thumb:hover { background: #ff6600; }
+
+/* --- Home Page Enhancements --- */
+#home {
+	position: relative; /* Needed for particle container */
+	overflow: hidden; /* Contain particles */
+	background: linear-gradient(45deg, #121317, #1f2937, #675048, #121317);
+	background-size: 400% 400%;
+	animation: gradientBG 10s ease infinite;
+	padding-bottom: 100px;
+	border-radius: 0px;
 }
 
-.banner h2 {
-	font-size: 48px;
-	margin-bottom: 20px;
+@keyframes gradientBG {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
 }
 
-.banner p {
-	font-size: 24px;
-	margin-bottom: 40px;
+/* Particle Container */
+#particles-js {
+	position: absolute !important;;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0; /* Behind content */
 }
-.logo {
+/* Ensure home content is above particles */
+#home > * {
+	position: relative;
+	z-index: 1;
+}
+
+/* --- Slideshow Styles --- */
+.slideshow-container {
+	position: relative;
+	max-width: 800px; /* Adjust as needed */
+	margin: 2rem auto 0; /* Spacing below hero text */
+	overflow: hidden;
+	border-radius: 0.5rem;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+	display: none; /* Hidden by default */
+	position: relative; /* For overlay positioning */
+	animation: fade 1.5s ease-in-out; /* Fade animation */
+}
+
+.slide img {
+	width: 100%;
+	display: block;
+	min-height: 250px; /* Ensure minimum height */
+	object-fit: cover; /* Cover the area */
+}
+
+.slide-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+	padding: 1.5rem 1rem 1rem;
+	color: white;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 20px;
-}
-
-.logo img {
-	height: 100px;
-	width: 100px;
-	margin-right: 20px;
-}
-
-.logo h1 {
-	font-size: 36px;
-	color: #fff;
-}
-.button {
-	display: inline-block;
-	background-color: #fff;
-	color: #ff6600;
-	padding: 10px 20px;
-	font-size: 20px;
-	border-radius: 5px;
-	text-decoration: none;
-}
-
-.button:hover {
-	background-color: #ff6600;
-	color: #fff;
-}
-
-.gallery {
-	margin-top: 50px;
-}
-
-.gallery h2 {
-	font-size: 36px;
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.img-container {
-display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap; /* Allow wrapping on small screens */
+	gap: 0.5rem; /* Space between items */
 }
 
-.img-container img {
-	width: 30%;
-	margin-bottom: 20px;
+.slide-title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	flex-grow: 1; /* Take available space */
 }
 
-.about {
-	margin-top: 50px;
-}
-
-.about h2 {
-	font-size: 36px;
-	margin-bottom: 20px;
-}
-
-.about p {
-	font-size: 24px;
-	margin-bottom: 40px;
-}
-
-.store-buttons {
+.slide-buttons {
 	display: flex;
-	justify-content: center;
-	margin-top: 20px;
+	gap: 0.5rem; /* Space between buttons */
 }
 
-.store-buttons a {
-	margin: 0 10px;
+.slide-buttons a {
+	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(5px);
+	color: #e0e0e0;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.375rem; /* rounded-md */
+	font-size: 0.875rem; /* text-sm */
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem; /* space-x-1 */
+	transition: background-color 0.2s;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.slide-buttons a:hover {
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
-.store-buttons img {
-	height: 60px;
-	width: auto;
+@keyframes fade {
+	from { opacity: 0.4; }
+	to { opacity: 1; }
 }
 
-footer {
-	background-color: #222;
-	padding: 20px;
+/* --- Sticky Social Bar Styles --- */
+#sticky-socials {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	background-color: rgba(31, 41, 55, 0.8); /* bg-gray-800 with opacity */
+	backdrop-filter: blur(5px);
+	padding: 0.75rem 0.5rem; /* py-3 px-2 */
+	border-radius: 0.5rem 0 0 0.5rem; /* rounded-l-lg */
+	display: flex;
+	flex-direction: column;
+	gap: 1rem; /* space-y-4 */
+	z-index: 40; /* Below header but above content */
+	box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+}
+#sticky-socials a {
+	color: #9ca3af; /* text-gray-400 */
+	transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+	display: block; /* Ensure links take full width for padding */
 	text-align: center;
 }
-
-footer p {
-	font-size: 18px;
-	margin: 0;
+#sticky-socials a:hover {
+	color: #ff6600; /* accent-color */
+	transform: scale(1.1);
+}
+/* Hide on small screens if it gets too intrusive */
+@media (max-width: 768px) {
+	#sticky-socials {
+		display: none; /* Or adjust position/styling */
+	}
 }
 
-@media only screen and (max-width: 768px) {
-	.container {
-		padding: 0 10px;
-	}
-	
-	header h1 {
-		font-size: 24px;
-		margin-right: 10px;
-	}
-	
-	header img {
-		height: 30px;
-		width: 30px;
-	}
-	
-	nav ul li {
-		margin-left: 10px;
-	}
-	
-	nav ul li a {
-		font-size: 16px;
-	}
-	
-	.banner {
-		padding: 20px;
-	}
-	
-	.banner h2 {
-		font-size: 36px;
-		margin-bottom:10px;
-	}
-	
-	.banner p {
-		font-size: 18px;
-		margin-bottom: 20px;
-	}
-	
-	.button {
-		font-size: 16px;
-		padding: 8px 16px;
-	}
-	
-	.gallery {
-		margin-top: 30px;
-	}
-	
-	.gallery h2 {
-		font-size: 24px;
-		margin-bottom: 10px;
-	}
-	
-	.img-container img {
-		width: 45%;
-		margin-bottom: 10px;
-	}
-	
-	.about {
-		margin-top: 30px;
-	}
-	
-	.about h2 {
-		font-size: 24px;
-		margin-bottom: 10px;
-	}
-	
-	.about p {
-		font-size: 18px;
-		margin-bottom: 20px;
-	}
-	
-	.store-buttons img {
-		height: 40px;
-	}
-	
-	footer p {
-		font-size: 16px;
-	}
-}
+/* Lucide Icon Placeholders */
+.lucide-youtube::before { content: '\e9d2'; }
+.lucide-tiktok::before { content: '\f22b'; } /* Placeholder */
+.lucide-discord::before { content: '\f130'; } /* Placeholder */
+.lucide-mail::before { content: '\ecaa'; }
+.lucide-user::before { content: '\ed1c'; }
+.lucide-message-square::before { content: '\ecd4'; }
+.lucide-send::before { content: '\ed69'; }
+.lucide-apple::before { content: '\e92f'; }
+.lucide-play::before { content: '\ed18'; } /* Placeholder for Google Play */
+.lucide-flame::before { content: '\ebf9'; }
+.lucide-gamepad-2::before { content: '\ebfe'; }
+.lucide-contact::before { content: '\eaf0'; }
+.lucide-menu::before { content: '\ecc1'; }
+.lucide-x::before { content: '\ed3a'; }

@@ -1,56 +1,279 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Forbidden Flame Studios</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Forbidden Flame Studios - Mobile Game Development</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://kit.fontawesome.com/2a52466188.js" crossorigin="anonymous"></script>
+
 </head>
-<body>
-	<header>
-		<div class="container">
-			<div class="logo">
-			<img src="logo.png" alt="Forbidden Flame Studios logo">
-			<nav>
-				<!--<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Games</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>-->
-			</nav>
+<body class="bg-gray-900 text-gray-200">
+
+<header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+	<nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+		<a href="#home" class="flex items-center space-x-2 page-link" data-target="home">
+			<img src="assets/logo.png" alt="Forbidden Flame Studios" class="h-20 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+			<span class="text-xl font-bold text-white hidden">
+                    Forbidden <span class="accent-color">Flame</span> Studios
+                </span>
+		</a>
+
+		<div class="hidden md:flex items-center space-x-6">
+			<a href="#home" class="nav-link text-gray-300 hover:text-orange-500 transition duration-200 page-link active" data-target="home">Home</a>
+			<a href="#portfolio" class="nav-link text-gray-300 hover:text-orange-500 transition duration-200 page-link" data-target="portfolio">Portfolio</a>
+			<a href="#contact" class="nav-link text-gray-300 hover:text-orange-500 transition duration-200 page-link" data-target="contact">Contact</a>
+		</div>
+
+		<div class="md:hidden">
+			<button id="mobile-menu-button" class="text-gray-300 hover:text-orange-500 focus:outline-none">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</div>
+	</nav>
+
+	<div id="mobile-menu" class="md:hidden hidden bg-gray-800">
+		<a href="#home" class="block py-2 px-6 text-gray-300 hover:bg-gray-700 hover:text-orange-500 page-link active" data-target="home">Home</a>
+		<a href="#portfolio" class="block py-2 px-6 text-gray-300 hover:bg-gray-700 hover:text-orange-500 page-link" data-target="portfolio">Portfolio</a>
+		<a href="#contact" class="block py-2 px-6 text-gray-300 hover:bg-gray-700 hover:text-orange-500 page-link" data-target="contact">Contact</a>
+	</div>
+</header>
+
+<div id="sticky-socials">
+	<a href="https://www.youtube.com/@ForbiddenFlameStudios" target="_blank" title="YouTube">
+		<i class="fa-brands fa-youtube"></i>
+	</a>
+	<a href="https://www.tiktok.com/@forbiddenflamestudios" target="_blank" title="TikTok">
+		<i class="fa-brands fa-tiktok"></i>
+	</a>
+	<a href="" target="_blank" title="Discord">
+		<i class="fa-brands fa-discord"></i>
+	</a>
+</div>
+
+<main class="container mx-auto px-6 py-8 md:py-16">
+
+	<section id="home" class="page-section min-h-screen flex flex-col justify-center items-center text-center relative">
+		<div id="particles-js"></div>
+
+		<div style="position: relative; width: 60%;">
+			<img  src="assets/logo.png">
+		</div>
+
+		<p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl"> Crafting captivating mobile gaming experiences. We are an indie studio passionate about bringing unique and fun games to your fingertips.
+		</p>
+		<a href="#portfolio" class="bg-accent hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 shadow-lg hover:shadow-orange-500/50 page-link flex items-center space-x-2 mb-12" data-target="portfolio">
+			<i class="fa-solid fa-gamepad"></i>
+			<span>Explore Our Games</span>
+		</a>
+
+		<div class="slideshow-container w-full max-w-3xl">
+
+			<div class="slide" style="position: relative; overflow: hidden; height: 350px; background-color: #2a2a2a;">
+				<img src="assets/TheOutlands2Banner.png"
+					 alt="The Outlands 2: Zombie Survival"
+					 style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;"
+					 onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#333'; /* Optional: Change background on error */">
+				<div class="slide-overlay">
+					<span class="slide-title">The Outlands 2: Zombie Survival</span>
+					<div class="slide-buttons">
+						<a href="https://play.google.com/store/apps/details?id=com.ForbiddenFlameStudios.TheOutlands2&hl=en" target="_blank">
+							<i class="fa-brands fa-google-play"></i> Google Play
+						</a>
+						<a href="https://apps.apple.com/us/app/the-outlands-2-zombie-survival/id6444243666" target="_blank">
+							<i class="fa-brands fa-app-store-ios"></i> App Store
+						</a>
+					</div>
 				</div>
-		</div>
-	</header>
-
-	<main>
-		<section class="banner">
-			<h2>Welcome to Forbidden Flame Studios</h2>
-			<p>Ambitious mobile developer and publisher</p>
-
-		</section>
-
-		<section class="gallery">
-			<h2>Our Games</h2>
-			<div class="img-container">
-				<img src="game1.png" alt="Game 1">
-				<img src="game2.png" alt="Game 2">
-<img src="game3.png" alt="Game 3">
 			</div>
-		</section>
 
-		<section class="about">
-			<h2>About Us</h2>
-			<p>Forbidden Flame Studios is a game development studio that specializes in creating fun and engaging mobile games with lots of replayability.</p>
-			<p>Check out our latest game, available now on the App Store and Google Play!</p>
-			<div class="store-buttons">
-				<a href="https://apps.apple.com/us/developer/mircea-craciun/id1610304199" class="app-store"><img src="app-store.png" alt="App Store"></a>
-				<a href="https://play.google.com/store/apps/dev?id=6897062352872833275" class="google-play"><img src="google-play.png" alt="Google Play"></a>
+			<div class="slide" style="position: relative; overflow: hidden; height: 350px; background-color: #2a2a2a;">
+				<img src="assets/BendingBattleBanner.png"
+					 alt="Bending Battle"
+					 style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;"
+					 onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#333';">
+				<div class="slide-overlay">
+					<span class="slide-title">Bending Battle</span>
+					<div class="slide-buttons">
+						<a href="https://play.google.com/store/apps/details?id=com.forbiddenflame.idle.td.battle.defense" target="_blank">
+							<i class="fa-brands fa-google-play"></i> Google Play
+						</a>
+						<a href="https://apps.apple.com/us/app/bending-battle-multiplayer/id1613506050" target="_blank">
+							<i class="fa-brands fa-app-store-ios"></i> App Store
+						</a>
+					</div>
+				</div>
 			</div>
-		</section>
-	</main>
 
-	<footer>
-		<div class="container">
-			<p>&copy; 2023 Forbidden Flame Studios</p>
 		</div>
-	</footer>
+
+	</section>
+
+	<section id="portfolio" class="page-section hidden pt-24"> <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+		Our <span class="accent-color">Games</span>
+	</h2>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+			<div class="game-card bg-gray-800 rounded-lg shadow-lg p-6 transition duration-300 hover:shadow-orange-500/30 status-maintained">
+				<div class="game-card-overlay"><span class="overlay-text text-xl font-semibold"></span></div>
+				<img src="assets/TO2_Icon.png" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.src='https://placehold.co/400x200/333333/e0e0e0?text=Game+Image+Not+Found'">
+				<h3 class="text-xl font-semibold mb-2 text-white">The Outlands 2: Zombie Survival</h3>
+				<p class="text-gray-400 text-sm mb-4">Team up with friends in this multiplayer zombie survival game, scavenging, crafting, and battling both the undead and other players to endure the apocalypse. </p>
+				<div class="flex justify-center space-x-4">
+					<a href="https://play.google.com/store/apps/details?id=com.ForbiddenFlameStudios.TheOutlands2&hl=en" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-google-play"></i> <span>Google Play</span>
+					</a>
+					<a href="https://apps.apple.com/us/app/the-outlands-2-zombie-survival/id6444243666" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-app-store-ios"></i> <span>App Store</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="game-card bg-gray-800 rounded-lg shadow-lg p-6 transition duration-300 hover:shadow-orange-500/30 status-down">
+				<div class="game-card-overlay"><span class="overlay-text text-xl font-semibold"></span></div>
+				<img src="assets/BendingBattle_Icon.png" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.src='https://placehold.co/400x200/333333/e0e0e0?text=Game+Image+Not+Found'">
+				<h3 class="text-xl font-semibold mb-2 text-white">Bending Battle</h3>
+				<p class="text-gray-400 text-sm mb-4">Unleash your elemental powers in this action-packed game where strategy and skill determine the ultimate victor.</p>
+				<div class="flex justify-center space-x-4">
+					<a href="" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-google-play"></i> <span>Google Play</span>
+					</a>
+					<a href="https://apps.apple.com/us/app/bending-battle-multiplayer/id1613506050" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-app-store-ios"></i> <span>App Store</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="game-card bg-gray-800 rounded-lg shadow-lg p-6 transition duration-300 hover:shadow-orange-500/30 status-maintained">
+				<div class="game-card-overlay"><span class="overlay-text text-xl font-semibold"></span></div>
+				<img src="assets/TO_Icon.png" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.src='https://placehold.co/400x200/333333/e0e0e0?text=Game+Image+Not+Found'">
+				<h3 class="text-xl font-semibold mb-2 text-white">The Outlands</h3>
+				<p class="text-gray-400 text-sm mb-4">Navigate a post-apocalyptic world overrun by zombies, focusing on exploration, scavenging, building, and crafting to survive.</p>
+				<div class="flex justify-center space-x-4">
+					<a href="https://play.google.com/store/apps/details?id=com.ForbiddenStudios.TheOutlands" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-google-play"></i> <span>Google Play</span>
+					</a>
+					<a href="https://apps.apple.com/us/app/the-outlands-zombie-survival/id1610304197" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-app-store-ios"></i> <span>App Store</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="game-card bg-gray-800 rounded-lg shadow-lg p-6 transition duration-300 hover:shadow-orange-500/30 status-down">
+				<div class="game-card-overlay"><span class="overlay-text text-xl font-semibold"></span></div>
+				<img src="assets/DrawingPhone_Icon.png"  class="w-full h-40 object-cover rounded-md mb-4" onerror="this.src='https://placehold.co/400x200/333333/e0e0e0?text=Game+Image+Not+Found'">
+				<h3 class="text-xl font-semibold mb-2 text-white">Drawing Phone</h3>
+				<p class="text-gray-400 text-sm mb-4">Enjoy a creative twist on the classic telephone game by sketching and guessing prompts with friends for endless fun and laughter.</p>
+				<div class="flex justify-center space-x-4">
+					<a href="https://play.google.com/store/apps/details?id=com.ForbiddenFlameStudios.DrawingPhone" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-google-play"></i> <span>Google Play</span>
+					</a>
+					<a href="https://apps.apple.com/us/app/drawing-phone-draw-guess/id6460007544" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-app-store-ios"></i> <span>App Store</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="game-card bg-gray-800 rounded-lg shadow-lg p-6 transition duration-300 hover:shadow-orange-500/30 status-maintained">
+				<div class="game-card-overlay"><span class="overlay-text text-xl font-semibold"></span></div>
+				<img src="assets/KC_Icon.png" class="object-cover rounded-md mb-4" onerror="this.src='https://placehold.co/400x200/333333/e0e0e0?text=Game+Image+Not+Found'">
+				<h3 class="text-xl font-semibold mb-2 text-white">Knight Conqueror</h3>
+				<p class="text-gray-400 text-sm mb-4">Lead, expand, and upgrade your army to conquer a medieval world, uniting tribes under your rule through strategic battles.</p>
+				<div class="flex justify-center space-x-4">
+					<a href="" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-google-play"></i> <span>Google Play</span>
+					</a>
+					<a href="" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-4 rounded-md text-sm flex items-center space-x-1 transition duration-200">
+						<i class="fa-brands fa-app-store-ios"></i> <span>App Store</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="page-section hidden pt-24"> <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+		Get In <span class="accent-color">Touch</span>
+	</h2>
+		<div class="max-w-2xl mx-auto bg-gray-800 rounded-lg shadow-lg p-8">
+			<p class="text-center text-gray-400 mb-6">
+				Have questions, feedback, or collaboration ideas? Reach out using the form below or connect on social media!
+			</p>
+			<form id="contact-form" action="https://formspree.io/f/mrbpopqg" method="POST">
+				<div class="mb-4">
+					<label for="name" class="block text-gray-400 text-sm font-medium mb-2">Name</label>
+					<div class="relative">
+						<span class="absolute inset-y-0 left-0 flex items-center pl-3">
+							<i class="fa-solid fa-user"></i>
+						</span>
+						<input type="text" id="name" name="name" required class="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Your Name">
+					</div>
+				</div>
+				<div class="mb-4">
+					<label for="email" class="block text-gray-400 text-sm font-medium mb-2">Email</label>
+					<div class="relative">
+						<span class="absolute inset-y-0 left-0 flex items-center pl-3">
+							<i class="fa-solid fa-envelope"></i>
+						</span>
+						<input type="email" id="email" name="email" required class="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="your.email@example.com">
+					</div>
+				</div>
+				<div class="mb-4">
+					<label for="subject" class="block text-gray-400 text-sm font-medium mb-2">Subject (Optional)</label>
+					<input type="text" id="subject" name="_subject" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Subject of your message">
+				</div>
+				<div class="mb-6">
+					<label for="message" class="block text-gray-400 text-sm font-medium mb-2">Message</label>
+					<div class="relative">
+						<span class="absolute top-3 left-0 flex items-center pl-3">
+							<i class="fa-solid fa-message"></i>
+						</span>
+						<textarea id="message" name="message" rows="4" required class="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Your message..."></textarea>
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="bg-accent hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 shadow-lg flex items-center justify-center space-x-2 w-full sm:w-auto mx-auto">
+						<i class="fa-solid fa-share"></i>
+						<span>Send Message</span>
+					</button>
+				</div>
+			</form>
+
+			<div class="mt-10 pt-6 border-t border-gray-700 text-center">
+				<p class="text-gray-400 mb-4">Or connect with us here:</p>
+				<div class="flex justify-center space-x-6">
+					<a href="https://www.youtube.com/@ForbiddenFlameStudios" target="_blank" class="text-gray-400 hover:text-orange-500 transition duration-200" title="YouTube">
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+					<a href="https://www.tiktok.com/@forbiddenflamestudios" target="_blank" class="text-gray-400 hover:text-orange-500 transition duration-200" title="TikTok">
+						<i class="fa-brands fa-tiktok"></i>
+					<a href="" target="_blank" class="text-gray-400 hover:text-orange-500 transition duration-200" title="Discord">
+						<i class="fa-brands fa-discord"></i>
+					</a>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<i data-lucide="x"></i>
+
+<footer class="bg-gray-800 mt-16 border-t border-gray-700">
+	<div class="container mx-auto px-6 py-6 text-center text-gray-500 text-sm">
+		&copy; <span id="current-year"></span> Forbidden Flame Studios. All Rights Reserved.
+	</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script src="script.js"></script>
+
+
 </body>
 </html>

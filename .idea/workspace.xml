@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a365331b-404e-479a-890e-e12de0c82278" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/BendingBattle_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/ChadIconRender.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/DrawingPhone_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/KC_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/TO2_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/TO_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/game1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/game2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/TheOutlands2Banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/BendingBattleBanner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/game3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mircea27c&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/forbiddenflamestudios/forbiddenflamestudios.github.io.git&quot;,
+    &quot;accountId&quot;: &quot;606ad83d-a06c-4974-8bd7-820da63bdf2e&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2u8umgIG9r8f9OtXRNxxMmx0rQ3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "P:/Websites/ForbiddenFlameStudios/forbiddenflamestudios.github.io/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="P:\Websites\ForbiddenFlameStudios\forbiddenflamestudios.github.io\assets" />
+      <recent name="P:\Websites\ForbiddenFlameStudios\forbiddenflamestudios.github.io" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\Websites\ForbiddenFlameStudios\forbiddenflamestudios.github.io\assets" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a365331b-404e-479a-890e-e12de0c82278" name="Changes" comment="" />
+      <created>1741642682431</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741642682431</updated>
+      <workItem from="1741642683492" duration="1516000" />
+      <workItem from="1743953817197" duration="7762000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
